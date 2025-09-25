@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Use rolldown bundler via CLI flag when scaffolding; config kept minimal
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
+  }
 })
