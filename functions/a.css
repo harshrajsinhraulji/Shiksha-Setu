@@ -2,4 +2,9 @@
     color: red; 
     background-attachment: fixed;
     background-color: black;
+    background-image: url('https://media.istockphoto.com/id/1147544807/photo/beautiful-scenery-of-milky-way-over-mountain-at-night-in-thailand.jpg?s=612x612&w=0&k=20&c=ZkLh8jv5n1b0r3HjT9b4gJ8kUu0Kf1eE2X1FzX1FzX1E=');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
