@@ -92,5 +92,38 @@
         </div>
         
         <script src="" async defer></script>
+        <script>
+            const display = document.getElementById('display');
+            const buttons = document.querySelectorAll('.buttons button');
+            let current = '';
+            let resetNext = false;
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const value = btn.textContent;
+                    if (value === 'C') {
+                        current = '';
+                        display.value = '';
+                    } else if (value === '=') {
+                        try {
+                            current = eval(current).toString();
+                            display.value = current;
+                            resetNext = true;
+                        } catch {
+                            display.value = 'Error';
+                            current = '';
+                            resetNext = true;
+                        }
+                    } else {
+                        if (resetNext) {
+                            current = '';
+                            resetNext = false;
+                        }
+                        current += value;
+                        display.value = current;
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
